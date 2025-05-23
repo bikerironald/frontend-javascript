@@ -45,3 +45,26 @@ function createEmployee(salary: number | string): Director | Teacher {
 console.log(createEmployee(200)); 
 console.log(createEmployee(1000));  
 console.log(createEmployee("500"));  
+
+// ...existing code...
+
+function isDirector(employee: Director | Teacher): employee is Director {
+  return (employee as Director).workDirectorTasks !== undefined;
+}
+
+function executeWork(employee: Director | Teacher): string {
+  if (isDirector(employee)) {
+    return employee.workDirectorTasks();
+  } else {
+    return employee.workTeacherTasks();
+  }
+}
+
+// Example usage:
+const emp1 = createEmployee(200);
+const emp2 = createEmployee(1000);
+
+console.log(executeWork(emp1)); // Getting to work
+console.log(executeWork(emp2)); // Getting to director tasks
+
+// ...existing code...
