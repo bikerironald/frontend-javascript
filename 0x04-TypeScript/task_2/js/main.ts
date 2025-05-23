@@ -68,3 +68,19 @@ console.log(executeWork(emp1)); // Getting to work
 console.log(executeWork(emp2)); // Getting to director tasks
 
 // ...existing code...
+
+
+type Subjects = "Math" | "History";
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  }
+  return "Teaching History";
+}
+
+// Example usage:
+console.log(teachClass("Math"));     // Teaching Math
+console.log(teachClass("History"));  // Teaching History
+
+// ...existing code...
