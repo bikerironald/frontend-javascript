@@ -7,7 +7,7 @@ interface Teacher {
   [key: string]: any;
 }
 
-// Example usage:
+
 const teacher1: Teacher = {
   firstName: "Erick",
   lastName: "Bikeri",
@@ -43,7 +43,7 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
 
 console.log(printTeacher("Bikeri", "Ronald")); 
 
-// ...existing code...
+
 
 interface StudentClass {
   new (firstName: string, lastName: string): StudentClassInterface;
@@ -70,4 +70,3 @@ const student = new StudentClass("Bikeri", "Ronald");
 console.log(student.displayName()); 
 console.log(student.workOnHomework()); 
 
-// ...existing code...
